@@ -10,13 +10,10 @@ export class Workday {
             throw new AppointmentTimeDailyFourException()
         }
 
-        let type: AppointmentTimeTypeEnum | null = null
-
-        if(!(this.appointments.length % 2)) {
-            type = AppointmentTimeTypeEnum.In
-        } else {
-            type = AppointmentTimeTypeEnum.Out
-        }
+        const type = 
+            !(this.appointments.length % 2) ?
+            AppointmentTimeTypeEnum.In :
+            AppointmentTimeTypeEnum.Out
 
 
         this.appointments.push(
