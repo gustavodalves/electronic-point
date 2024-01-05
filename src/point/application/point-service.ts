@@ -1,5 +1,5 @@
 import { Employee } from "../domain/models/employee";
-import EmployeeRepository from "../domain/repositories/Employee";
+import EmployeeRepository from "../domain/repositories/employee";
 
 export default class PointService {
     constructor(
